@@ -56,7 +56,8 @@ Requires [`@preview/cetz:0.4.2`](https://typst.app/universe/package/cetz).
     mo.modiagram(
       mo.ao(name: "test", x: 0, energy: 0, electrons: "pair", label: [test]),
     )
-  })
+})
+```
 
 ---
 
