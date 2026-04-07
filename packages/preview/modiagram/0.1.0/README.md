@@ -26,8 +26,12 @@ Requires [`@preview/cetz:0.4.2`](https://typst.app/universe/package/cetz).
 > **Tip — avoid name conflicts.** `modiagram` exports wrappers named `line`, `circle`, `rect`, `arc`, `grid`, and `content` that shadow Typst built-ins. Import inside a scoped block to keep names local:
 > 
 > ```typst
-> #import "@preview/modiagram:0.1.0" as mo
-> #figure({ import mo: *; modiagram(...) })
+> #figure({
+>  import mo: *
+>   modiagram(
+>     ao(name: "test", x: 0, energy: 0, electrons: "pair", label: [test]),
+>   )
+> })
 > ```
 > 
 > Alternatively use the `mo-line`, `mo-circle`, … aliases, or prefix Typst built-ins with `std.`.
@@ -39,16 +43,20 @@ Requires [`@preview/cetz:0.4.2`](https://typst.app/universe/package/cetz).
 ```typst
 // Recommended — scoped, no leakage
 #import "@preview/modiagram:0.1.0" as mo
-#figure({ import mo: *; modiagram(...) })
+#figure({
+  import mo: *;
+    modiagram(
+      ao(name: "test", x: 0, energy: 0, electrons: "pair", label: [test]),
+    )
+  })
 
 // Named module — explicit prefix
 #import "@preview/modiagram:0.1.0" as mo
-mo.modiagram(mo.ao(...), mo.connect(...))
-
-// Star import — use mo-* aliases if needed
-#import "@preview/modiagram:0.1.0": *
-modiagram(ao(...), mo-line(...))   // mo-line avoids shadowing std line
-```
+#figure({
+    mo.modiagram(
+      mo.ao(name: "test", x: 0, energy: 0, electrons: "pair", label: [test]),
+    )
+  })
 
 ---
 
