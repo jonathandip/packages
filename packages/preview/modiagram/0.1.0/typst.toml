@@ -8,6 +8,3 @@ description = "Draw molecular orbital and energy pathway diagrams."
 repository  = "https://github.com/jonathandip/modiagram"
 keywords    = ["chemistry", "molecular-orbital", "diagram", "MO", "cetz", "energy-pathway"]
 exclude     = ["tests/", "examples/", ".github/"]
-
-[package.dependencies]
-cetz = ">=0.4.2"
