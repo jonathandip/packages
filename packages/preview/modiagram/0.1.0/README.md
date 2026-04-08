@@ -20,7 +20,7 @@ Requires [`@preview/cetz:0.4.2`](https://typst.app/universe/package/cetz).
   )
 })
 ```
-![example-01](images/example-01.png)
+![example of quick start](images/example-01.png)
 
 ---
 ## Import styles
@@ -35,7 +35,7 @@ The recommended method for importing is to use an alias: this prevents certain f
 #figure({
   import mo: *
   modiagram(
-	...
+	ao(name: "test", x: 0, energy: 0, electrons: "pair", label: [test]),
   )
 })
 
@@ -45,7 +45,7 @@ The recommended method for importing is to use an alias: this prevents certain f
 
 #figure(
   mo.modiagram(
-	...
+	ao(name: "test", x: 0, energy: 0, electrons: "pair", label: [test]),
   )
 )
 ```
@@ -116,7 +116,7 @@ Draws one orbital bar with optional electrons and label.
 
 This is an (exaggerated) example of how all these settings can be used to represent atomic orbitals.
 
-![example-02](/images/example-02.png)
+![example of ao orbital representation](/images/example-02.png)
 
 ---
 ### `connect(...)` — connection lines
@@ -175,7 +175,7 @@ Building on the previous example, it is possible to pair orbitals using their "n
 })
 ```
 
-![example-03](/images/example-03.png)
+![example of connect function](/images/example-03.png)
 
 ---
 
@@ -246,7 +246,7 @@ Example of use:
 })
 ```
 
-![example-04](/images/example-04.png)
+![example with energy axis](/images/example-04.png)
 
 ---
 
@@ -309,7 +309,7 @@ The `x-scale` and `energy-scale` functions are extremely useful: they allow you 
 })
 ```
 
-![example-05](/images/example-05.png)
+![example with config and energy-scale](/images/example-05.png)
 
 ---
 
@@ -368,7 +368,7 @@ This feature is extremely useful for computational chemists who wish to represen
   )
 })
 ```
-![example-06](/images/example-06.png)
+![example of energy pathway](/images/example-06.png)
 
 ---
 
@@ -421,7 +421,7 @@ A complex method for using CeTZ primitives within modiagram:
 })
 ```
 
-![example-07](/images/example-07.png)
+![example of raw cetz primitive](/images/example-07.png)
 
 ---
 ## Position forms
@@ -449,7 +449,7 @@ Extra keyword arguments available on all wrappers: `pad`, `dx`, `dy`.
 | `"circle"` | Circle with side extensions             | solid              |
 | `"fancy"`  | Rounded box with longer side extensions | dashed             |
 
-![example-08](/images/example-08.png)
+![example of orbital style](/images/example-08.png)
 
 ---
 
@@ -462,7 +462,7 @@ Extra keyword arguments available on all wrappers: `pad`, `dx`, `dy`.
 | `"solid"`  | Solid line      |
 | `"gray"`   | Solid gray line |
 
-![example-09](/images/example-09.png)
+![example of connection styles](/images/example-09.png)
 
 ---
 
@@ -550,7 +550,7 @@ per-element parameter
 })
 ```
 
-![example-10](/images/example-10.png)
+![example of multiple functions in mo](/images/example-10.png)
 
 ---
 
