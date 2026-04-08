@@ -411,7 +411,7 @@ A complex method for using CeTZ primitives within modiagram:
 	  name-prefix: "olive"
 	),
 
-	energy-axis(title: "E")
+	energy-axis(title: "E"),
 	
 	raw((xs, ys, anchors) => {
 		let p = at("black-3", anchors, edge: "right")
